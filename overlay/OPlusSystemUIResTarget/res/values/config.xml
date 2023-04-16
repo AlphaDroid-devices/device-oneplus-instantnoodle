@@ -11,4 +11,7 @@
     <!-- The Enrollment Progress bar for UDFPS sensor in pixels -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">123</integer>
 
+    <!-- Whether the combined qs shows in status bar -->
+    <bool name="flag_combined_qs_headers">false</bool>
+
 </resources>
