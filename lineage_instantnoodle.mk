@@ -12,14 +12,41 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from instantnoodle device
 $(call inherit-product, device/oneplus/instantnoodle/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+# Inherit some common AlphaDroid stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Device config
+TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
-PRODUCT_NAME := evolution_instantnoodle
+# GAPPS config
+# 0 - NO GAPPS (default)
+# 1 - CORE GAPPS
+# 2 - FULL GAPPS
+WITH_GAPPS := 2
+
+# Use Google Telephony pack (Dialer, Contacts, Messaging) on GAPPS builds
+# Default = true
+TARGET_USE_GOOGLE_TELEPHONY := true
+
+# Include Pixel Framework on FULL GAPPS builds
+# Default = true
+TARGET_USE_PIXEL_FRAMEWORK := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := false
+TARGET_DEFAULT_ADB_ENABLED := true
+
+# Maintainer
+ALPHA_BUILD_TYPE := Unofficial
+ALPHA_MAINTAINER := zizzyboi
+
+PRODUCT_NAME := lineage_instantnoodle
 PRODUCT_DEVICE := instantnoodle
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
