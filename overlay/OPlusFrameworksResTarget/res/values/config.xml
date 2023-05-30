@@ -399,7 +399,7 @@
     <integer-array name="config_udfps_sensor_props" translatable="false" >
         <item>546</item>  <!-- <item>sensorLocationX</item> -->
         <item>1909</item> <!-- <item>sensorLocationY</item> -->
-        <item>118</item>   <!-- <item>sensorRadius</item> -->
+        <item>105</item>   <!-- <item>sensorRadius</item> -->
     </integer-array>
 
 </resources>
